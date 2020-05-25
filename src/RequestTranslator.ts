@@ -1,4 +1,4 @@
-import * as jaTranslation from "./locales/response/ja.json";
+import * as jaTranslation from "./locales/request/ja.json";
 
 const translations = {
   ja: jaTranslation,
@@ -11,10 +11,10 @@ type FinancialStatus = keyof Translation["financialStatuses"];
 type FulfillmentStatus = keyof Translation["fulfillmentStatuses"];
 
 export class RequestTranslator {
-  private translation: Translation;
   public orderStatuses: Map<OrderStatus, string>;
   public financialStatuses: Map<FinancialStatus, string>;
   public fulfillmentStatuses: Map<FulfillmentStatus, string>;
+  private translation: Translation;
 
   constructor(locale: Locale) {
     this.translation = translations[locale];
@@ -42,17 +42,5 @@ export class RequestTranslator {
       this.translation.fulfillmentStatuses[key as FulfillmentStatus],
     ]);
     this.fulfillmentStatuses = new Map<FulfillmentStatus, string>(fulfillmentStatuses);
-  }
-
-  translateOrderStatus(status: OrderStatus) {
-    return this.translation.orderStatuses[status];
-  }
-
-  translateFinancialStatus(status: FinancialStatus) {
-    return this.translation.financialStatuses[status];
-  }
-
-  translateFulfillmentStatus(status: FulfillmentStatus) {
-    return this.translation.fulfillmentStatuses[status];
   }
 }

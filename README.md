@@ -11,21 +11,30 @@
 ```ts
 import { RequestTranslator, ResponseTranslator } from "@huckleberry-inc/shopify-app-locales"
 
-// Translate GraphQL request parameters
+// Initializes RequestTranslator instance
 const requestTranslator = new RequestTranslator("ja")
-requestTranslator.translateOrderStatus("open") // オープン
-requestTranslator.translateFinancialStatus("authorized") // オーソリ済み 
-requestTranslator.translateFulfillmentStatus("shipped") // 発送済
 
-// Fetch statuses
-requestTranslator.orderStatuses
-requestTranslator.financialStatuses
-requestTranslator.fulfillmentStatuses
+// Traslates request parameters
+requestTranslator.orderStatuses.get("open") // オープン
+requestTranslator.financialStatuses.get("authorized") // オーソリ済
+requestTranslator.fulfillmentStatuses.get("shipped") // 発送済
 
 
-// Translate GraphQL response parameters
+// Initializes ResponseTranslator instance
 const responseTranslator = new ResponseTranslator("ja")
-responseTranslator.translateProvince("Aichi") // 愛知県
+
+// Traslates response parameters
+responseTranslator.provinces.get("Aichi") // 愛知県
+
+
+// "Statuses" is Set instance. You can iterate it.
+requestTranslator.fulfillmentStatuses).forEach(([key, value]) => {
+    ...
+})
+
+Array.from(requestTranslator.fulfillmentStatuses).map(([key, value]) => {
+  return { value, key }
+}
 ```
 
 ## Install

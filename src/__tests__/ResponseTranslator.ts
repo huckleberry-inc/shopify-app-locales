@@ -1,7 +1,7 @@
 import { ResponseTranslator } from "../index";
 
-test("translates reqsponse province in ja", () => {
+test("returns provinces in ja", () => {
   const responseTranslator = new ResponseTranslator("ja");
 
-  expect(responseTranslator.translateProvince("Aichi")).toBe("愛知県");
+  expect(responseTranslator.provinces.get("Aichi")).toBe("愛知県");
 });
