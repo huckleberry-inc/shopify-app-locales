@@ -1,38 +1,31 @@
 # Welcome to @huckleberry-inc/shopify-app-locales 👋
-![Version](https://img.shields.io/badge/version-0.0.2-blue.svg?cacheSeconds=2592000)
+![Version](https://img.shields.io/badge/version-0.0.3-blue.svg?cacheSeconds=2592000)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#)
 
-> Locale library for Shopify app
+> Locale library for Shopify app (Supports Japanese only for now)
 
 ### 🏠 [Homepage](https://github.com/huckleberry-inc/shopify-app-locales)
 
 ## Usage
 
 ```ts
-import { RequestTranslator, ResponseTranslator } from "@huckleberry-inc/shopify-app-locales"
+import { Translator } from "@huckleberry-inc/shopify-app-locales"
 
-// Initializes RequestTranslator instance
-const requestTranslator = new RequestTranslator("ja")
+// Initializes Translator instance
+const translator = new Translator("ja")
 
-// Traslates request parameters
-requestTranslator.orderStatuses.get("open") // オープン
-requestTranslator.financialStatuses.get("authorized") // オーソリ済
-requestTranslator.fulfillmentStatuses.get("shipped") // 発送済
+// Traslates words
+translator.provinces.get("Aichi") // 愛知県
+translator.orderStatuses.get("open") // オープン
+translator.financialStatuses.get("authorized") // オーソリ済
+translator.fulfillmentStatuses.get("shipped") // 発送済
 
-
-// Initializes ResponseTranslator instance
-const responseTranslator = new ResponseTranslator("ja")
-
-// Traslates response parameters
-responseTranslator.provinces.get("Aichi") // 愛知県
-
-
-// "Statuses" is Set instance. You can iterate it.
-requestTranslator.fulfillmentStatuses.forEach(([key, value]) => {
+// Words are Set instance. You can iterate it.
+translator.fulfillmentStatuses.forEach(([key, value]) => {
   ...
 })
 
-Array.from(requestTranslator.fulfillmentStatuses).map(([key, value]) => {
+Array.from(translator.fulfillmentStatuses).map(([key, value]) => {
   return { value, key }
 }
 ```
@@ -40,13 +33,13 @@ Array.from(requestTranslator.fulfillmentStatuses).map(([key, value]) => {
 ## Install
 
 ```sh
-yarn install
+yarn add @huckleberry-inc/shopify-app-locales
 ```
 
 ## Run tests
 
 ```sh
-yarn run test
+yarn test
 ```
 
 ## Author

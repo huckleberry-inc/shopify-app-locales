@@ -1,4 +1,3 @@
-import { RequestTranslator } from "./RequestTranslator";
-import { ResponseTranslator } from "./ResponseTranslator";
+import { Translator } from "./Translator";
 
-export { RequestTranslator, ResponseTranslator }
+export { Translator }
