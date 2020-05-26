@@ -1,5 +1,5 @@
 # Welcome to @huckleberry-inc/shopify-app-locales 👋
-![Version](https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000)
+![Version](https://img.shields.io/badge/version-0.0.2-blue.svg?cacheSeconds=2592000)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#)
 
 > Locale library for Shopify app
@@ -28,8 +28,8 @@ responseTranslator.provinces.get("Aichi") // 愛知県
 
 
 // "Statuses" is Set instance. You can iterate it.
-requestTranslator.fulfillmentStatuses).forEach(([key, value]) => {
-    ...
+requestTranslator.fulfillmentStatuses.forEach(([key, value]) => {
+  ...
 })
 
 Array.from(requestTranslator.fulfillmentStatuses).map(([key, value]) => {
