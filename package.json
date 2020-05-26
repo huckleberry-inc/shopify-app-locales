@@ -1,6 +1,6 @@
 {
   "name": "@huckleberry-inc/shopify-app-locales",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Locale library for Shopify app",
   "author": "Huckleberry, inc. <dev@huckleberry-inc.com>",
   "license": "MIT",

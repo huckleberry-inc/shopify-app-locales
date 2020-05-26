@@ -1,5 +1,5 @@
 # Welcome to @huckleberry-inc/shopify-app-locales 👋
-![Version](https://img.shields.io/badge/version-0.0.3-blue.svg?cacheSeconds=2592000)
+![Version](https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#)
 ![Test](https://github.com/huckleberry-inc/shopify-app-locales/workflows/Test/badge.svg)
 
