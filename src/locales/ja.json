@@ -1,4 +1,28 @@
 {
+  "orderStatuses": {
+    "any": "全て",
+    "open": "オープン",
+    "closed": "アーカイブ済",
+    "cancelled": "キャンセル済"
+  },
+  "financialStatuses": {
+    "any": "全て",
+    "authorized": "オーソリ済",
+    "paid": "支払い済",
+    "partially_refunded": "一部返金済",
+    "partially_paid": "一部支払済",
+    "pending": "保留中",
+    "refunded": "返金済",
+    "unpaid": "未払い",
+    "voided": "無効"
+  },
+  "fulfillmentStatuses": {
+    "any": "全て",
+    "shipped": "発送済",
+    "unshipped": "未発送",
+    "partial": "一部発送済",
+    "unfulfilled": "一部発送済と未発送"
+  },
   "provinces": {
     "Aichi": "愛知県",
     "Akita": "秋田県",

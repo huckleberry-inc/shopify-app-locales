@@ -1,4 +1,4 @@
-import * as jaTranslation from "./locales/request/ja.json";
+import * as jaTranslation from "./locales/ja.json";
 
 const translations = {
   ja: jaTranslation,
@@ -6,41 +6,51 @@ const translations = {
 
 type Locale = "ja";
 type Translation = typeof jaTranslation;
+type Province = keyof Translation["provinces"];
 type OrderStatus = keyof Translation["orderStatuses"];
 type FinancialStatus = keyof Translation["financialStatuses"];
 type FulfillmentStatus = keyof Translation["fulfillmentStatuses"];
 
-export class RequestTranslator {
+export class Translator {
+  public provinces: Map<Province, string>;
   public orderStatuses: Map<OrderStatus, string>;
   public financialStatuses: Map<FinancialStatus, string>;
   public fulfillmentStatuses: Map<FulfillmentStatus, string>;
-  private translation: Translation;
 
   constructor(locale: Locale) {
-    this.translation = translations[locale];
+    const translation = translations[locale];
+
+    const provinces: [Province, string][] = Object.keys(
+      translation.provinces
+    ).map((key) => [key as Province, translation.provinces[key as Province]]);
+    this.provinces = new Map<Province, string>(provinces);
 
     const orderStatuses: [OrderStatus, string][] = Object.keys(
-      this.translation.orderStatuses
+      translation.orderStatuses
     ).map((key) => [
       key as OrderStatus,
-      this.translation.orderStatuses[key as OrderStatus],
+      translation.orderStatuses[key as OrderStatus],
     ]);
     this.orderStatuses = new Map<OrderStatus, string>(orderStatuses);
 
     const financialStatuses: [FinancialStatus, string][] = Object.keys(
-      this.translation.financialStatuses
+      translation.financialStatuses
     ).map((key) => [
       key as FinancialStatus,
-      this.translation.financialStatuses[key as FinancialStatus],
+      translation.financialStatuses[key as FinancialStatus],
     ]);
-    this.financialStatuses = new Map<FinancialStatus, string>(financialStatuses);
+    this.financialStatuses = new Map<FinancialStatus, string>(
+      financialStatuses
+    );
 
     const fulfillmentStatuses: [FulfillmentStatus, string][] = Object.keys(
-      this.translation.fulfillmentStatuses
+      translation.fulfillmentStatuses
     ).map((key) => [
       key as FulfillmentStatus,
-      this.translation.fulfillmentStatuses[key as FulfillmentStatus],
+      translation.fulfillmentStatuses[key as FulfillmentStatus],
     ]);
-    this.fulfillmentStatuses = new Map<FulfillmentStatus, string>(fulfillmentStatuses);
+    this.fulfillmentStatuses = new Map<FulfillmentStatus, string>(
+      fulfillmentStatuses
+    );
   }
 }
