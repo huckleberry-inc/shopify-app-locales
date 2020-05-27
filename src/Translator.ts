@@ -6,10 +6,10 @@ const translations = {
 
 type Locale = "ja";
 type Translation = typeof jaTranslation;
-type Province = keyof Translation["provinces"];
-type OrderStatus = keyof Translation["orderStatuses"];
-type FinancialStatus = keyof Translation["financialStatuses"];
-type FulfillmentStatus = keyof Translation["fulfillmentStatuses"];
+export type Province = keyof Translation["provinces"];
+export type OrderStatus = keyof Translation["orderStatuses"];
+export type FinancialStatus = keyof Translation["financialStatuses"];
+export type FulfillmentStatus = keyof Translation["fulfillmentStatuses"];
 
 export class Translator {
   public provinces: Map<Province, string>;

@@ -1,3 +1,15 @@
-import { Translator } from "./Translator";
+import {
+  Translator,
+  Province,
+  OrderStatus,
+  FinancialStatus,
+  FulfillmentStatus,
+} from "./Translator";
 
-export { Translator }
+export {
+  Translator,
+  Province,
+  OrderStatus,
+  FinancialStatus,
+  FulfillmentStatus,
+};
