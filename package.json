@@ -17,7 +17,7 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "scripts": {
-    "test": "jest",
+    "test": "jest src/",
     "build": "tsc",
     "prepublishOnly": "npm run build"
   },
