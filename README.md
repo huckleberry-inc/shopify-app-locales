@@ -1,7 +1,7 @@
 # Welcome to @huckleberry-inc/shopify-app-locales 👋
 ![Version](https://img.shields.io/badge/version-0.1.1-blue.svg?cacheSeconds=2592000)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#)
-![Test](https://github.com/huckleberry-inc/shopify-app-locales/workflows/Test/badge.svg)
+![build and test](https://github.com/huckleberry-inc/shopify-app-locales/workflows/build%20and%20test/badge.svg)
 
 > Locale library for Shopify app (Supports Japanese only for now)
 
