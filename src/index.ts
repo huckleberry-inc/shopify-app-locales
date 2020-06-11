@@ -4,7 +4,7 @@ import {
   OrderStatus,
   FinancialStatus,
   FulfillmentStatus,
-} from "./Translator";
+} from './Translator';
 
 export {
   Translator,
