@@ -1,5 +1,5 @@
 # Welcome to @huckleberry-inc/shopify-app-locales 👋
-![Version](https://img.shields.io/badge/version-0.1.1-blue.svg?cacheSeconds=2592000)
+![Version](https://img.shields.io/badge/version-0.1.3-blue.svg?cacheSeconds=2592000)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#)
 ![build and test](https://github.com/huckleberry-inc/shopify-app-locales/workflows/build%20and%20test/badge.svg)
 
@@ -21,7 +21,7 @@ translator.orderStatuses.get("open") // オープン
 translator.financialStatuses.get("authorized") // オーソリ済
 translator.fulfillmentStatuses.get("shipped") // 発送済
 
-// Words are Set instance. You can iterate it.
+// Words are Map instance. You can iterate it.
 translator.fulfillmentStatuses.forEach(([key, value]) => {
   ...
 })
